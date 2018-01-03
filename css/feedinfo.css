@@ -1,0 +1,77 @@
+
+body{
+background-image: url("img.jpg");
+background-repeat: repeat;
+}
+
+#facebook{
+  padding-top: 80px;
+}
+#Facebookprofile { 
+  padding-top: 0.5%;
+}
+h1{
+  font-family: "Curlz MT";
+  font-size: 80px;
+  text-decoration: underline;
+}
+
+.box{
+        background-color: transparent;
+        width: auto;
+        padding: 2%;
+        margin: 2%;
+        font-size: 20px;
+        font-family: "Cooper";
+}
+.pos{
+       text-align: center;
+}
+#Facebookfeed{
+  margin-top: 2%;
+}
+button{
+  background-color: #244e91;
+  color: white;
+}
+.sidebar {
+    width: 50%;
+  background-color: transparent;
+    display: block;
+    padding: 2%;
+    margin-top: 5%;
+}
+.sidebar a{
+  color: black;
+}
+.sidebar a:hover {
+  background-color: #ccc;
+}
+.sidebar a:active{
+  background-color: #4caf50;
+  color: white;
+}
+.fb-profile, .fb-image-lg, .myCoverPic{
+    z-index: 0;
+    width: 200%;  
+    margin-bottom: 10px;
+    height: 315px;
+}
+
+.fb-image-profile
+{
+    margin: -90px 10px 0px 50px;
+    z-index: 9;
+    width: 20%; 
+}
+
+@media (max-width:768px)
+{
+
+.fb-image-profile
+{
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%; 
+}
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Facebook Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Find your facebook pge details in this page using Facebook Graph API">
+  
+    <!-- stylesheet css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/feedinfo.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+
+	<!-- header section -->
+    <div class="container">
+      <div id="facebook">
+        <h1 class="pos"> Welcome </h1>
+        <div class="form-group">
+          <div class="input-group" style="padding: 50px 10px 0 20px">
+            <span class="input-group-addon">API</span>
+            <input type="text" class="form-control" id="apiid" placeholder="Copy your Facebook API Token here...">
+          </div>
+      	  <button id="facebookBtn1" class="btn btn-default pos box" type="button" >Click here to get Facebook Profile info</button>          	
+      	  <button id="facebookBtn2" class="btn btn-default pos box" type="button">Click here to get Facebook Feed info</button>
+        </div>
+      </div>
+    </div>
+
+	<!-- Output Part -->
+    <div class="container">
+      <!-- Cover and profile Picture -->
+            <div class="row" id="photos" >
+              <div class="col-md-12 col-sm-12 col-lg-12">
+                <div id="fb-profile">
+                  <img align="left" class="myCoverPic img-responsive" alt="Cover pic" >
+                  <img align="left" class="myProfilePic img-responsive fb-image-profile thumbnail" alt="Profile pic">
+                </div>
+              </div>
+            </div>
+            
+      <div id="Facebookprofile"> 
+        
+            <!-- Facebook Profile info -->
+            <div class="row">
+              <div class="col-md-4 col-sm-12 col-lg-4">
+                <div class="sidebar" id="mySidebar">
+                  <ul>
+                    <li><a href="#basic" id="click1">About</a></li></br>
+                    <li><a href="#work" id="click2">Work &amp; Education</a></li></br>
+                    <li><a href="#family" id="click3">Family &amp; Relationship</a></li></br>
+                    <li><a href="#contact" id="click4">Contacts</a></li>
+                  </ul> 
+                </div> 
+              </div>
+          
+              <!-- About me Section -->
+              <div class="col-md-8 col-sm-12 col-lg-8">
+                <div id="basic">
+                  <h2>About Me</h2>
+                  <br />
+                  <p>Firstname : <span id="myFirstName"></span></p>
+                  <p>Lastname : <span id="myLastName"></span></p>
+                  <p>Fullname : <span id="myName"></span></p>
+                  <p>Facebook Profile ID : <span id="myProfileId"></span></p>
+                  <p>Gender : <span id="myGender"></span></p>
+                  <p>Birthday : <span id="myBirthday"></span></p>
+                  <p>Languages : <span id="myLanguage"></span></p>
+                  <p>Home Town : <span id="myHomeTown"></span></p>
+                  <p>My Quotes: <span id="myQuotes"></span></p>
+                </div>
+              </div>
+          
+              <!-- Work and Education section -->
+              <div class="col-md-8 col-sm-12 col-lg-8">
+                <div id="work">
+                  <h2>Work and Education</h2>
+                  <br />
+                  <p>Work : <span id="myWork"></span></p>
+                  <p>Education : <span id="myEducation"></span></p>
+                </div>
+              </div>
+          
+              <!-- Family and Relationship -->
+              <div class="col-md-8 col-sm-12 col-lg-8">
+                <div id="family">
+                  <h2>Relationship</h2>
+                  <br />
+                  <p>Relationship Status : <span id="myRelation"></span></p>
+                  <p>Family members : <span id="myFamily"></span></p>
+                </div>
+              </div>
+          
+              <!-- contact -->
+              <div class="col-md-8 col-sm-12 col-lg-8">
+                <div id="contact">
+                  <h2>Contacts</h2>
+                  <br />
+                  <p>Email : <span id="myEmail" style="color: #3366CC"></span></p>
+                  <p>Websites : <span id="myWebsite" style="color: #3366CC"></span></p>
+                </div>
+              </div>
+            </div> <!-- end row -->
+      </div> <!-- end Facebookprofile -->
+    </div> <!-- end container -->
+          
+  <!-- Facebook Feed info -->
+    <div class="container">
+      <div id="Facebookfeed">  
+        
+        <!-- Feed 1 -->  
+        <section class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed1">
+                <a id="post1"></a>
+                <a class="photoPost1"></a>
+              </div>
+            </div>
+        <!-- Feed 2 -->
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed2">
+                <a id="post2"></a>
+                <a class="photoPost2"></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feed 3 -->
+        <section class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed3">
+                <a id="post3"></a>
+                <a class="photoPost3"></a>
+              </div>
+            </div>
+        <!-- Feed 4 -->
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed4">
+                <a id="post4"></a>
+                <a class="photoPost4"></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feed 5 -->
+        <section class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed5">
+                <a id="post5"></a>
+                <a class="photoPost5"></a>
+              </div>
+            </div>
+        <!-- Feed 6 -->
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed6">
+                <a id="post6"></a>
+                <a class="photoPost6"></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        <!-- Feed 7 -->  
+        <section class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed7">
+                <a id="post7"></a>
+                <a class="photoPost7"></a>
+              </div>
+            </div>
+        <!-- Feed 8 -->  
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed8">
+                <a id="post8"></a>
+                <a class="photoPost8"></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feed 9 -->  
+        <section class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed9">
+                <a id="post9"></a>
+                <a class="photoPost9"></a>
+              </div>
+            </div>
+        <!-- Feed 10 -->  
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="feed10">
+                <a id="post10"></a>
+                <a class="photoPost10"></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+        <div id="goBackBtn" class="row" style="text-align:center;">
+          <button><h4>Go Back to Home page</h4></button>
+        </div>
+      
+    </div>  	
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/info.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+  </body>
+</html>
