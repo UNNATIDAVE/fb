@@ -9,6 +9,7 @@
   //Function for Button 1 for profile info  
   
     $("#facebookBtn1").on('click',function(){
+      $("#photos").show();
         $("#Facebookfeed").hide("100");
         $("#Facebookprofile").show("100");
         $("#facebook").hide();
@@ -17,7 +18,7 @@
         $("#family").hide();
         $("#contact").hide();
         $("#basic").show();
-        $("#photos").show();
+        
         
       // function for sidebar  
       $("#click1").on("click",function(){
@@ -59,6 +60,11 @@
           success : function(response){
               console.log(response);
               console.log(typeof(response));
+              // Cover photo
+              $(".myCoverPic").attr("src", "" + response.cover.source + "");  
+              
+              // Profile photo
+              $(".myProfilePic").attr("src", "" + response.picture.data.url + "");
               
               //About me Section
               $("#myFirstName").text(response.first_name);
@@ -100,11 +106,7 @@
               $("#myEmail").text(response.email);            
               $("#myWebsite").html(response.website);
 
-              // Cover photo
-              $(".myCoverPic").attr("src", "" + response.cover.source + "");  
               
-              // Profile photo
-              $(".myProfilePic").attr("src", "" + response.picture.data.url + "");
           }, // end of success      
                 
           //error handling
