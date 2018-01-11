@@ -10,7 +10,9 @@
     <!-- stylesheet css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <link rel="stylesheet" href="css/feedinfo.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
   </head>
 
   <body>
@@ -46,15 +48,29 @@
         
             <!-- Facebook Profile info -->
             <div class="row">
-              <div class="col-md-4 col-sm-12 col-lg-4">
-                <div class="sidebar" id="mySidebar">
-                  <ul>
-                    <li><a href="#basic" id="click1">About</a></li></br>
-                    <li><a href="#work" id="click2">Work &amp; Education</a></li></br>
-                    <li><a href="#family" id="click3">Family &amp; Relationship</a></li></br>
-                    <li><a href="#contact" id="click4">Contacts</a></li>
-                  </ul> 
-                </div> 
+              <div class="col-md-3 col-sm-12 col-lg-3">
+                <nav class="navbar navbar-default " id="sideNav">
+              
+                <!-- Toggle Menu -->
+                  <div align="center" class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Lean more</a>
+                  </div>
+
+                  <div class="collapse navbar-collapse sidebar" id="bs-example-navbar-collapse-1">
+                    <ul class="navbar-nav nav">
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#basic" id="click1">About</a></li></br>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work" id="click2">Work &amp; Education</a></li></br>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#family" id="click3">Family &amp; Relationship</a></li></br>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact" id="click4">Contacts</a></li>
+                    </ul> 
+                  </div>
+                </nav>
               </div>
           
               <!-- About me Section -->
@@ -212,10 +228,10 @@
       
     </div>  	
 
-    <!-- Latest compiled and minified JavaScript -->
+    <!-- Bootstrap core JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/info.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="js/info.js"></script>
 
   </body>
 </html>
