@@ -96,7 +96,7 @@
       
               // Family and Relationship
               $("#myRelation").html(response.relationship_status);
-              var family = response.family.data;
+              var family = response.family;
               var myFamily = $.map(family, function(index) {
                 return index.name;
               });
